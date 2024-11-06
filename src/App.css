@@ -1,0 +1,115 @@
+/* App.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --background-color: rgba(255, 255, 255, 0.8);
+  --text-color: #000000;
+}
+
+/* Dark Theme Styles */
+body.dark-mode, .dark-mode {
+  background: linear-gradient(180deg, #243642, #387478, #629584, #E2F1E7);
+  --background-color: rgba(60, 60, 60, 0.85);
+  --text-color: #ffffff;
+}
+
+/* Light Theme Styles */
+body.light-mode, .light-mode {
+  background: linear-gradient(180deg, #F1EAFF, #E5D4FF, #DCBFFF, #D0A2F7);
+  --background-color: rgba(245, 230, 255, 0.85);
+  --text-color: #4b0082;
+}
+
+/* Dashboard Container */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Widget styling */
+.weather-widget,
+.calendar-widget,
+.news-widget,
+.quote-widget {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s, color 0.3s;
+  margin: 20px 0;
+}
+
+.weather-widget:hover,
+.calendar-widget:hover,
+.news-widget:hover,
+.quote-widget:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styling for QuoteWidget */
+.quote-widget h3 {
+  margin-bottom: 10px;
+}
+
+.quote-widget blockquote {
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.quote-widget footer {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Dark Mode Button */
+button {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #7b4fa9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5e3783;
+}
+
+/* Error Message and Retry Button */
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.retry-button {
+  padding: 5px 10px;
+  background-color: #7b4fa9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #5e3783;
+}
